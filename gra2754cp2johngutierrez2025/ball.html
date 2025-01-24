@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
+	<style>
+		#ball{
+			animation: bounce .5s infinite linear;
+		}
+		@keyframes bounce {
+			0%{transform: translateY(0);}
+			50%{transform: translateY(-300px);}
+			100%{transform: translateY(0);}
+		}
+		#horizontal{
+			animation: moving .5s infinite linear;
+		}
+		@keyframes moving {
+			0%{transform: translateX(-1000px);}
+			100%{transform: translateX(0px);}
+		}
+		#shrink{
+			animation: shrinking 3s infinite linear;
+		}
+		@keyframes shrinking {
+			0% {transform: scale(1);
+			transform-origin:100% 83.468%;}
+			100% {transform: scale(.1);
+			transform-origin:100% 83.468%;}
+		
+		}
+	</style>
+						  
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1423" height="1080" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1423 1080">
+  <defs>
+    <radialGradient id="radial-gradient" cx="1276.5" cy="820.5" fx="1225.87" fy="747.62" r="146" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e9cd7"/>
+      <stop offset="0" stop-color="#cce0f4"/>
+      <stop offset=".07" stop-color="#c2dbf1"/>
+      <stop offset=".2" stop-color="#a9cdea"/>
+      <stop offset=".36" stop-color="#7fb7df"/>
+      <stop offset=".54" stop-color="#4599d0"/>
+      <stop offset=".74" stop-color="#0075be"/>
+      <stop offset=".99" stop-color="#005b97"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <rect x="3.5" y=".5" width="1419" height="966" fill="#c4c4c4"/>
+    <path d="M1422,1v965H4V1h1418M1423,0H3v967h1420V0h0Z"/>
+  </g>
+  <g>
+    <rect x=".5" y="967.5" width="1422" height="112" fill="#606060"/>
+    <path d="M1422,968v111H1v-111h1421M1423,967H0v113h1423v-113h0Z"/>
+  </g>
+  <g id="shrink">
+    <g id="horizontal">
+      <g id="ball">
+        <path d="M1276.5,966.5c-80.5,0-146-65.5-146-146s65.5-146,146-146,146,65.5,146,146-65.5,146-146,146Z" fill="url(#radial-gradient)"/>
+        <path d="M1276.5,675c38.86,0,75.4,15.13,102.88,42.62s42.62,64.02,42.62,102.88-15.13,75.4-42.62,102.88-64.02,42.62-102.88,42.62-75.4-15.13-102.88-42.62-42.62-64.02-42.62-102.88,15.13-75.4,42.62-102.88,64.02-42.62,102.88-42.62M1276.5,674c-80.91,0-146.5,65.59-146.5,146.5s65.59,146.5,146.5,146.5,146.5-65.59,146.5-146.5-65.59-146.5-146.5-146.5h0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</body>
+</html>
