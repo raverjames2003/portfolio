@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drag and Drop Practiced</title>
+	<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+	<style>
+	body {
+    margin: 0;
+    background-color: lightgray;
+}
+    wrapper {
+    margin: auto;
+    width: 250px;
+    padding: 10px;
+    display: block;
+    background-color: #FFFFFF;
+}
+    div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightblue;
+    display: inline-block;
+    border: thin solid blue;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+</head>
+
+<body>
+<wrapper>
+  <div id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/img_w3slogo.gif" alt="" width="88" height="31" id="drag1" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div id="drop3" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/img_w3slogo-rev.gif" alt="" width="88" height="31" id="drag2" draggable="true" ondragstart="drag(event)"></div>
+  <div id="drop4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</wrapper>
+</body>
+</html>
